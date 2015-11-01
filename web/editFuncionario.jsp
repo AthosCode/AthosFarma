@@ -16,7 +16,7 @@
 
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>Editar funcionario</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="scripts/cadastro.css "/>
@@ -27,7 +27,7 @@
             <form action="EditarFuncionario" method="get" name="cadfuncionario" id="cadfuncionario">
                 id: <input type="text" name="tid" id="cid" value="${funcionario.id}"/>
                 Nome: <input type="text" name="tnome" id="cnome" value="${funcionario.nome}" required/>
-                Sobrenome: <input type="text" name="tsobrenome" id="csobrenome"value="${funcionario.nome}" required/><br><br>
+                Sobrenome: <input type="text" name="tsobrenome" id="csobrenome"value="${funcionario.sobrenome}" required/><br><br>
                 CPF: <input type="text" name="tcpf" id="ccpf" maxlength="14" OnKeyPress="formatar('###.###.###-##', this)"/>
                 RG: <input type="text" name="trg" id="crg"/>
                 Data Nascimneto: <input type="date" name="tdata" id="cdata"/><br><br>
