@@ -24,6 +24,7 @@
                 Endereço: <input type="text" name="tendreco" id="cendereco" placeholder="Rua" size="50" maxlength="30"/><br><br>
                 CEP: <input type="text" name="tcep" id="ccep"/>
                 Cidade: <input type="text" name="tcidade" id="ccidade"/><br><br>
+                Estado: <input type="text" name="testado" id="cestado"/><br><br>
                 Função: <input type="text" name="tfuncao" id="cfuncao"/>
                 Salario: <br><br>
                 Data Admisao: <input type="date" name="tadmisao" id="cadmisao"/>

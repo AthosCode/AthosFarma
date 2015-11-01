@@ -42,11 +42,14 @@ public class ControlerFuncionario extends HttpServlet {
         
         String nome = request.getParameter("tnome");
         String sobrenome = request.getParameter("tsobrenome");
+        
         Funcionario funcionario = new Funcionario();
         funcionario.setNome(nome);
         funcionario.setSobrenome(sobrenome);
+        
         FuncionarioDao funcionarioDao = new FuncionarioDao();
         funcionarioDao.inserir(funcionario);
+        
         response.sendRedirect("http://localhost:8080/AthosFarma/cadastro.jsp"); 
     }
 
