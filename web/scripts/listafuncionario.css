@@ -1,0 +1,20 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 28/10/2015, 16:24:37
+    Author     : VIVO
+*/
+
+#alter {
+    
+    width: 600px; 
+    height: 300px; 
+    left: 50%; 
+    margin: -80px 0 0 -300px; 
+    padding:10px;
+    position: absolute; 
+    top: 50%; 
+}
