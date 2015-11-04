@@ -50,7 +50,7 @@ public class ControlerFuncionario extends HttpServlet {
         FuncionarioDao funcionarioDao = new FuncionarioDao();
         funcionarioDao.inserir(funcionario);
         
-        response.sendRedirect("http://localhost:8080/AthosFarma/cadastro.jsp"); 
+        response.sendRedirect("http://localhost:8080/AthosFarma/cadastrar-funcionario.jsp"); 
     }
 
    
