@@ -12,6 +12,10 @@
         <servlet-name>EditarFuncionario</servlet-name>
         <servlet-class>controler.EditarFuncionario</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Autenticar</servlet-name>
+        <servlet-class>serveletsControle.Autenticar</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>listaFuncionario</servlet-name>
         <url-pattern>/listaFuncionario</url-pattern>
@@ -63,6 +67,10 @@
     <servlet-mapping>
         <servlet-name>EditarFuncionario</servlet-name>
         <url-pattern>/EditarFuncionario</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Autenticar</servlet-name>
+        <url-pattern>/Autenticar</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

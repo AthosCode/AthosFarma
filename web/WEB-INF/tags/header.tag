@@ -1,4 +1,5 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib prefix="logado" tagdir="/WEB-INF/tags" %>
 <header>
 
     <div class="conteudo">
@@ -18,12 +19,13 @@
             <div>
 
                 <span>
-                    Nome do Usuário
+                    Bem vindo!<br>
+                    <logado:UsuarioLogado/>
                 </span>
                 
                 <small>
                     
-                    <a href="">
+                    <a href="Login.jsp">
                         Logout
                     </a>
                     

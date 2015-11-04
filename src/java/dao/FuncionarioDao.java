@@ -119,4 +119,23 @@ public class FuncionarioDao {
             throw new RuntimeException("Falha ao atualizar JDBC", ex);
         }
     }
+    
+    
+    public boolean AutenticaUsuario (Funcionario funcionario){
+        String SQL = "SELECT * FROM funcionario WHERE nome=? and sobrenome=?";
+       
+        try {
+            PreparedStatement ps = connection.prepareStatement(SQL);
+            ps.setString(1,funcionario.getNome());
+            ps.setString(2,funcionario.getSobrenome());
+            ResultSet rs = ps.executeQuery();
+            if (rs.next()){
+                return true;
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(FuncionarioDao.class.getName()).log(Level.SEVERE, null, ex);
+            throw new RuntimeException("Falha autenticaçao JDBC", ex);
+        }
+       return false; 
+    }
 }

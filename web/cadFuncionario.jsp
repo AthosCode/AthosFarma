@@ -29,6 +29,7 @@
                 Salario: <br><br>
                 Data Admisao: <input type="date" name="tadmisao" id="cadmisao"/>
                 Data Demisao: <input type="date" name="tdemisao" id="cdemisao"/><br><br>
+                Senha: <input type="text" name="tsenha" id="csenha"/>
                 <input type="submit" value="SALVAR"/> 
                  <th><a href="Listar.jsp">Listar Todos</a>
            </form>
