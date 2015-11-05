@@ -40,7 +40,7 @@ public class ListaPaginado extends HttpServlet {
          
         List produtos = daoProduto.ListarSearch(nomeproduto);
         request.setAttribute("sesaoprodutos", produtos);
-        RequestDispatcher rd = request.getRequestDispatcher("/listaProdutos.jsp");
+        RequestDispatcher rd = request.getRequestDispatcher("/ListaCompras.jsp");
         rd.forward(request, response);
     }
 
