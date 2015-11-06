@@ -1,0 +1,8 @@
+
+CREATE TABLE produtos
+(
+id_produto INTEGER NOT NULL GENERATED ALWAYS AS IDENTITY (START WITH 1, INCREMENT BY 1),
+nome_produto VARCHAR(40) NOT NULL,
+valor_produto NUMERIC(16,2),
+CONSTRAINT primary_key_produto PRIMARY KEY (id)
+) ;
