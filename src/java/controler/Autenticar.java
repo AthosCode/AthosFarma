@@ -47,6 +47,7 @@ public class Autenticar extends HttpServlet {
             sessao.setAttribute("sessaoUsuario",login);
             request.getRequestDispatcher("teste.jsp").forward(request, response);
         }else {
+              request.setAttribute("mensagem", "Usuario e senha Errados");
               request.getRequestDispatcher("Login.jsp").forward(request, response);
         }
     }

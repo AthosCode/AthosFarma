@@ -16,10 +16,10 @@
     <body>
         <div id="cadastro">
         <form action="CadastroProduto" method="get" name="cadfuncionario" id="cadfuncionario">
-                Nome_Produto: <input type="text" name="tnome_produto" id="cnome" required/>
-                Valor Unitario: <input type="text" name="tvalor_produto" id="csobrenome" required/><br><br>
+                Nome_Produto: <input type="text" name="tnome_produto" id="cnome_produto" required/>
+                Valor Unitario: <input type="text" name="tvalor_produto" id="cvalor_produto" required/><br><br>
                 <input type="submit" value="SALVAR"/> 
-                 <th><a href="Listar.jsp">Listar Todos</a>
+                 <th><a href="listaProdutos.jsp">Listar Todos</a>
            </form>
              </div>
        

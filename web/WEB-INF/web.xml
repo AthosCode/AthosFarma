@@ -16,6 +16,18 @@
         <servlet-name>Autenticar</servlet-name>
         <servlet-class>serveletsControle.Autenticar</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>CadastroProduto</servlet-name>
+        <servlet-class>controler.CadastroProduto</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ListaProduto</servlet-name>
+        <servlet-class>controler.ListaProduto</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ListaPaginado</servlet-name>
+        <servlet-class>controler.ListaPaginado</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>listaFuncionario</servlet-name>
         <url-pattern>/listaFuncionario</url-pattern>
@@ -41,20 +53,12 @@
         <servlet-class>controler.ControlerFuncionario</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>ListarFuncionarios</servlet-name>
-        <servlet-class>controler.ListarFuncionarios</servlet-class>
-    </servlet>
-    <servlet>
         <servlet-name>ExcluirFuncionario</servlet-name>
         <servlet-class>controler.ExcluirFuncionario</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>ControlerFuncionario</servlet-name>
         <url-pattern>/ControlerFuncionario</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>ListarFuncionarios</servlet-name>
-        <url-pattern>/ListarFuncionarios</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>ExcluirFuncionario</servlet-name>
@@ -71,6 +75,18 @@
     <servlet-mapping>
         <servlet-name>Autenticar</servlet-name>
         <url-pattern>/Autenticar</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CadastroProduto</servlet-name>
+        <url-pattern>/CadastroProduto</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ListaProduto</servlet-name>
+        <url-pattern>/ListaProduto</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ListaPaginado</servlet-name>
+        <url-pattern>/ListaPaginado</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

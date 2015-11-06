@@ -22,18 +22,20 @@
                 Search: <input type="text" name="tsearch" id="csearch"/>
                 <input type="submit" value="serch"/> 
            </form>
-             </div>
+        </div><br>
         
          <table border="1px" cellpadding="5px" cellspacing="0" id="alter">
             <tr> 
-                <td>ID</td><td>Produto</td><td>Valor Unitario</td><td>Excluir</td><td>Editar</td><td>Buscar</td>
+                <td>ID</td><td>Produto</td><td>Valor Unitario</td><td>Quantidade</td><td>Valor Total</td>
             
                 
                
             </tr>
+            
+            
             <%
                 ProdutoDao dao = new ProdutoDao();
-                List<Produto> produto = dao.Listar();
+                List<Produto> produto = dao.ListarSearch("tsearch");
                 for (Produto produ : produto) {
                     
                     
@@ -43,11 +45,11 @@
                 <th><%= produ.getId()%></th>
                 <th><%= produ.getNome_produto()%></th>
                 <th><%= produ.getValor_produto()%></th>
-                <th><a href="ExcluirFuncionario?acao=&id=<%= produ.getId()*10%>"></a></th> 
-                <th><a href="EditFuncionario?acao=&id=<%= produ.getId()%>" ><img src="img/editar.gif"/> </a></th> 
-                <th><a href="EditFuncionario?acao=&id=<%= produ.getId()%>" ><img src="img/lupa.png"/> </a></th> 
+                <th> <input type ="number" name="cquantidade"/> </th> 
+                <th><a href="ExcluirFuncionario?acao=&id=<%= produ.getId()%>"></a></th> 
+                
               
-                      
+           
             </tr>
 
             <%
