@@ -21,7 +21,8 @@
 <!DOCTYPE html>
 
         <h1>LISTA PRODUTOS</h1>
-          <th><a href="cadProduto.jsp">voltar</a></th>
+          <a href="cadProduto.jsp">voltar</a>
+           <a href="cadastrar-funcionario.jsp">home</a>
         <table border="1px" cellpadding="5px" cellspacing="0" id="alter">
             <tr> 
                 <td>ID</td><td>Produto</td><td>Valor Unitario</td><td>Excluir</td><td>Editar</td><td>Buscar</td>
@@ -40,7 +41,7 @@
                 <th><%= produ.getId()%></th>
                 <th><%= produ.getNome_produto()%></th>
                 <th><%= produ.getValor_produto()%></th>
-                <th><a href="ExcluirFuncionario?acao=&id=<%= produ.getId()%>"><img src="img/excluir.gif"/></a></th> 
+                <th><a href="ExcluirProduto?acao=&id=<%= produ.getId()%>"><img src="img/excluir.gif"/></a></th> 
                 <th><a href="EditFuncionario?acao=&id=<%= produ.getId()%>" ><img src="img/editar.gif"/> </a></th> 
                 <th><a href="EditFuncionario?acao=&id=<%= produ.getId()%>" ><img src="img/lupa.png"/> </a></th> 
               

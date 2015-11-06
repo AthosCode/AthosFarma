@@ -28,6 +28,10 @@
         <servlet-name>ListaPaginado</servlet-name>
         <servlet-class>controler.ListaPaginado</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ExcluirProduto</servlet-name>
+        <servlet-class>controler.ExcluirProduto</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>listaFuncionario</servlet-name>
         <url-pattern>/listaFuncionario</url-pattern>
@@ -87,6 +91,10 @@
     <servlet-mapping>
         <servlet-name>ListaPaginado</servlet-name>
         <url-pattern>/ListaPaginado</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ExcluirProduto</servlet-name>
+        <url-pattern>/ExcluirProduto</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

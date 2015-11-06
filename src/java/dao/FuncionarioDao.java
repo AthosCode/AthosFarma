@@ -24,10 +24,13 @@ public class FuncionarioDao {
 
     Connection connection;
 
+    
     public FuncionarioDao() {
 
         connection = Conexao.getConexao();
     }
+    
+  
 
     public void inserir(Funcionario funcionario) {
         try {

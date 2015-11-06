@@ -1,13 +1,21 @@
 
 <%@taglib prefix="t" tagdir="/WEB-INF/tags" %>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib prefix="" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page import="dao.FuncionarioDao"%>
 <%@page import="modelo.Funcionario"%>
 <%@page import="java.util.List"%>
 <%@page import="java.util.Iterator"%>
-<%@taglib uri= "http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jstl/core_rt" %>
 
- 
+ <jsp:useBean id="dao" class="dao.FuncionarioDao"/> 
+ <c:forEach items="" var="element">    
+  <tr>
+    <td>${element.getStatus()}</td>
+    <td>${element.getRequestType()}</td>
+    <td>${element.getRequestedFor()}</td>
+    <td>${element.getTimeSubmitted()}</td>
+  </tr>
+</c:forEach>
 
 <t:template>
 
@@ -24,33 +32,18 @@
         <!-- JavaScript e outros que vão ao final -->
         <script type="text/javascript" src="<c:url value="/js/bootstrap-datepicker.min.js" />"></script>
         <script type="text/javascript" src="<c:url value="/js/bootstrap-datepicker.pt-BR.min.js" />"></script>
-        <script type="text/javascript">
-            $('[data-datepicker]').datepicker({
-                format: 'dd/mm/yyyy',
-                startDate: '0',
-                language: 'pt-BR'
-            });
-        </script>
     </jsp:attribute>
-        
-          
-
-    <jsp:body>
-
-        
-        
-        
       
-
        
-            
+    <jsp:body>             
 <h1>LISTA FUNCIONARIOS</h1>
       <div class="container">
           
   <table class="table table-hover">
-    <thead>
+    
+    <thead>     
       <tr>
-        <th>Id</th>
+        <th>ID</th>
         <th>Nome</th>
         <th>Sobrenome</th>
         <th>Excluir</th>
@@ -58,24 +51,22 @@
         <th>Buscar</th>
       </tr>       
     </thead>
+   
     <tbody>
-      <tr>
-        <td>Doe</td>
-        <td>john@example.com</td>
+        <tr>
+          
+        <td>${funci.id}</td>
+        <td>${funci.nome}</td>
+        <td>${funci.sobrenome}</td>
+        <td><a href="ExcluirFuncionario?acao=&id=${funcionario.id}"><img src="img/excluir.gif"/></a></td> 
+        <td><a href="EditFuncionario?acao=&id=${funcionario.id}" ><img src="img/editar.gif"/> </a></td> 
+        <td><a href="EditFuncionario?acao=&id=${funcionario.id}" ><img src="img/lupa.png"/> </a></td> 
       </tr>
-      <tr>
-        <td>Mary</td>
-        <td>Moe</td>
-        <td>mary@example.com</td>
-      </tr>
-      <tr>
-        <td>July</td>
-        <td>Dooley</td>
-        <td>july@example.com</td>
-      </tr>
+      
     </tbody>
   </table>
 </div>
-   </jsp:body>
-
+     
+ </jsp:body>
 </t:template>
+

@@ -88,4 +88,20 @@ public class ProdutoDao {
             throw new RuntimeException("Falha ao listar JDBC", ex);
         }
     }
+     
+     public void remover(int id) {
+
+        try {
+
+            String SQL = "DELETE FROM produtos WHERE id_produto= ?";
+            PreparedStatement ps = connection.prepareStatement(SQL);
+            ps.setInt(1, id);
+            ps.executeUpdate();
+
+        } catch (SQLException ex) {
+            Logger.getLogger(FuncionarioDao.class.getName()).log(Level.SEVERE, null, ex);
+            throw new RuntimeException("Erro na exclusao", ex);
+
+        }
+    }
 }
