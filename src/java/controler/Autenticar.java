@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package serveletsControle;
+package controler;
 
 import dao.FuncionarioDao;
 import java.io.IOException;
@@ -45,7 +45,7 @@ public class Autenticar extends HttpServlet {
         if (dao.AutenticaUsuario(funcionario)){
             HttpSession sessao = request.getSession();
             sessao.setAttribute("sessaoUsuario",login);
-            request.getRequestDispatcher("teste.jsp").forward(request, response);
+            request.getRequestDispatcher("/ControlerFuncionario").forward(request, response);
         }else {
               request.setAttribute("mensagem", "Usuario e senha Errados");
               request.getRequestDispatcher("Login.jsp").forward(request, response);

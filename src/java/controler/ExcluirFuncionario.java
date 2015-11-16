@@ -27,7 +27,7 @@ public class ExcluirFuncionario extends HttpServlet {
             int i = Integer.parseInt(id);
             FuncionarioDao funcionario = new FuncionarioDao();
             funcionario.remover(i);
-            response.sendRedirect("listaFuncionario"); 
+            response.sendRedirect("http://localhost:8080/AthosFarma/ListaFuncionarios"); 
             
             
     }
