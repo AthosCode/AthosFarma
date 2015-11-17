@@ -10,6 +10,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -20,6 +21,7 @@ import modelo.Funcionario;
  *
  * @author VIVO
  */
+ @WebServlet (name="Autenticar", urlPatterns = {"/Autenticar"})
 public class Autenticar extends HttpServlet {
 
     /**
@@ -48,7 +50,7 @@ public class Autenticar extends HttpServlet {
             request.getRequestDispatcher("/ControlerFuncionario").forward(request, response);
         }else {
               request.setAttribute("mensagem", "Usuario e senha Errados");
-              request.getRequestDispatcher("Login.jsp").forward(request, response);
+              request.getRequestDispatcher("index.jsp").forward(request, response);
         }
     }
 

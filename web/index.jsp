@@ -1,47 +1,61 @@
-
 <%-- 
     Document   : Login
-    Created on : 04/11/2015, 10:21:40
-    Author     : VIVO
+    Created on : 15/11/2015, 20:39:09
+    Author     : Dener
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link href="css/bootstrap.min.css" rel="stylesheet" media="screen" />
+        <link href="css/bootstrap.css" rel="stylesheet" media="screen" />
+        <script src="js/jquery-1.9.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
         
         <title>JSP Page</title>
-         
+        
     </head>
-    <body>
-    <center>
-        <form name="FormLogin" action="Autenticar" method="POST">
-            <table border="0">
-                <thead>
-                    <tr>
-                        <th colspan="2"> AUTENTICAÇÃO</th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Login:</td>
-                        <td> <input type="text" name="login" value="" size="26" /> </td>
-                    </tr>
-                    <tr>
-                        <td>Senha:</td>
-                        <td> <input type="password" name="senha" value="" size="26" /> </td>
-                    </tr>
-                    <tr>
-                        <td> <input type="submit" value="Entrar" name="botaoAuth" /> </td>
-                        <td></td>
-                    </tr>
-                </tbody>
-            </table>
-        </form>
-    </center>
-    
-</body>
+    <body style="background:#eee;">
+      <div class="container">
+          <P><br></p>
+             <div class="row">
+                <div class="col-md-8"></div>
+                <div class="col-md-4">
+                         <div class="panel panel-default">
+                                 <div class="panel-body">
+                                    <div class="page-header">
+                                        <h3>Login</h3>
+                             </div>
+                             <form role="form">
+                                <div class="form-group">
+                                 <label for="exampleInputEmail1">Email address</label>
+                                 <div class="input-group">
+                                     <span class="input-group-addon">  <span class="glyphicon glyphicon-user"></span></span>
+                                    <input type="text" class="form-control" placeholder="Username">
+                                 </div>
+                                 
+                                 
+                                 
+                                </div>
+                    <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                     <div class="input-group">
+                                     <span class="input-group-addon">  <span class="glyphicon glyphicon-asterisk"></span></span>
+                                    <input type="text" class="form-control" placeholder="Username">
+                                 </div>
+                                 
+                                  <hr>
+                    <button type="submit" class="btn btn-success">Back</button>
+                     <button type="submit" class="btn btn-primary">Submit</button>
+                    <p><br/></p>
+                    </form>
+                    </div>
+                  </div>
+                </div>
+        </div>
+    </div>  
+   
+ </body>
 </html>

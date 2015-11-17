@@ -38,7 +38,7 @@ public class ListaPaginado extends HttpServlet {
          
             String nomeproduto = request.getParameter("tsearch");
          
-        List produtos = daoProduto.ListarSearch(nomeproduto);
+        List produtos = daoProduto.Buscar(nomeproduto);
         request.setAttribute("sesaoprodutos", produtos);
         RequestDispatcher rd = request.getRequestDispatcher("/ListaCompras.jsp");
         rd.forward(request, response);

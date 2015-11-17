@@ -43,7 +43,7 @@ public class EditarFuncionario extends HttpServlet {
         funcionario.setSobrenome(sobrenome);
         FuncionarioDao funcionarioDao = new FuncionarioDao();
         funcionarioDao.editar(funcionario);
-        response.sendRedirect("/WEB-INF/jsp/cadastrar-funcionario.jsp"); 
+        response.sendRedirect("ListaFuncionarios"); 
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

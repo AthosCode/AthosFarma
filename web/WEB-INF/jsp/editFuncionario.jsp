@@ -5,7 +5,7 @@
 <t:template>
 
     <jsp:attribute name="paginaTitulo">
-        Cadastro de Funcionario
+        AthosFarma
     </jsp:attribute>
 
     <jsp:attribute name="paginaHead">
@@ -30,7 +30,7 @@
 
         <div class="conteudo">
 
-            <form class="form-vertical " action="EditFuncionario" method="get" name="cadfuncionario" id="cadfuncionario">
+            <form class="form-vertical " action="EditarFuncionario" method="get" name="cadfuncionario" id="cadfuncionario">
                  <div class="row">
                     <div class="col-sm-6">
                         <div class="form-group">
@@ -235,11 +235,14 @@
                     
                 </div>
 
-                <div class="form-group">
+                 <div class="btn-group">
                     <div class="">
-                        <button type="submit" class="btn btn-lg btn-primary">
+                        <button type="submit" class= "btn btn-primary" > <i class="glyphicon glyphicon-saved"></i>
                             Salvar
                         </button>
+                        <a  href="ListaFuncionarios"   <button type="submit" class= "btn btn-primary" > <i class="glyphicon glyphicon-search"></i> Listar Todos </a>
+                            
+                        </button>   
                     </div>
                 </div>
 

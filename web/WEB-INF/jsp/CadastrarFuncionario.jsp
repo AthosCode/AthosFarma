@@ -5,7 +5,7 @@
 <t:template>
 
     <jsp:attribute name="paginaTitulo">
-        Cadastro de Funcionario
+        AthosFarma
     </jsp:attribute>
 
     <jsp:attribute name="paginaHead">
@@ -234,7 +234,9 @@
                         <button type="submit" class= "btn btn-primary" > <i class="glyphicon glyphicon-saved"></i>
                             SALVAR
                         </button>
-                        
+                         </button>
+                        <a  href="ListaFuncionarios"   <button type="submit" class= "btn btn-primary" > <i class="glyphicon glyphicon-search"></i> Listar Todos </a>   
+                        </button>  
                     </div>
                 </div>
 

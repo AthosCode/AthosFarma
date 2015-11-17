@@ -5,16 +5,12 @@
         <jsp-file>listaFuncionario.jsp</jsp-file>
     </servlet>
     <servlet>
-        <servlet-name>EditFuncionario</servlet-name>
-        <servlet-class>controler.EditFuncionario</servlet-class>
-    </servlet>
-    <servlet>
         <servlet-name>EditarFuncionario</servlet-name>
         <servlet-class>controler.EditarFuncionario</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>Autenticar</servlet-name>
-        <servlet-class>serveletsControle.Autenticar</servlet-class>
+        <servlet-class>controler.Autenticar</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>CadastroProduto</servlet-name>
@@ -67,10 +63,6 @@
     <servlet-mapping>
         <servlet-name>ExcluirFuncionario</servlet-name>
         <url-pattern>/ExcluirFuncionario</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>EditFuncionario</servlet-name>
-        <url-pattern>/EditFuncionario</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>EditarFuncionario</servlet-name>

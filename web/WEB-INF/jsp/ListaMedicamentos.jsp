@@ -27,34 +27,27 @@
       
        
     <jsp:body>             
-<h1>LISTA FUNCIONARIOS</h1>
+<h1>LISTA MEDICAMENTOS</h1>
       <div class="container">
           
   <table class="table table-hover">
     
     <thead>     
       <tr>
-        <th>ID</th>
-        <th>Nome</th>
-        <th>Sobrenome</th>
-        <th>Excluir Salvar </th>
+        <th>Codigo</th>
+        <th>Descriçao</th>
+        <th>ValorUnitario</th>
+        
        
       </tr>       
     </thead>
    
     <tbody>
-       
-      <c:forEach items="${listafuncionarios}" var="funcionario" >
-        <tr> 
-        <td>${funcionario.id}</td>
-        <td>${funcionario.nome}</td>
-        <td>${funcionario.sobrenome}</td>
-        <td>
-            <div class="btn-group">
-              <a href="EditFuncionario?acao=&id=${funcionario.id}" type="button" class="btn btn-primary" title="Deseja realmente excluir o projeto?" data-toggle="confirmation" data-singleton="true" data-popout="true"><i class="glyphicon glyphicon-pencil" title="Excluir o projeto"></i> Editar</a>
-              <a href="ExcluirFuncionario?acao=&id=${funcionario.id}" type="button" class="btn btn-outline btn-danger" title="Deseja realmente excluir o projeto?" data-toggle="confirmation" data-singleton="true" data-popout="true"><i class="fa fa-trash-o fa-fw" title="Excluir o projeto"></i> Deletar</a> 
-             </div>
-        </td> 
+      <c:forEach var="produto" items="${produtos}">    
+      <tr> 
+        <td>${produto.id_produto}</td>
+        <td>${produto.nome_produto}</td>
+        <td>${produto.valor_produto}</td> 
       </tr>
       </c:forEach> 
     </tbody>

@@ -14,7 +14,7 @@
 <t:template>
 
     <jsp:attribute name="paginaTitulo">
-        Cadastro de Funcionario
+        AthosFarma
     </jsp:attribute>
 
     <jsp:attribute name="paginaHead">
@@ -55,14 +55,15 @@
 
 
 
-   <div class="container">
-          
+   <div class="container-fluid">     
   <table class="table table-hover">
     <thead>
       <tr>
         <th>ID</th>
         <th>Descricao</th>
         <th>Valor</th>
+         <th>Quantidade</th>
+         <th>Adcionar</th>
       
       </tr>
     </thead>
@@ -73,6 +74,19 @@
         <td>${produto.id_produto}</td>
         <td>${produto.nome_produto}</td>
         <td>${produto.valor_produto}</td>
+        
+         <td> 
+             
+       <div class="form-group">
+      <select class="form-control" id="sel1">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+      </select>
+      </div>    
+
+        </td>
         <td> 
              
                 <button class="btn btn-primary" type="submit">

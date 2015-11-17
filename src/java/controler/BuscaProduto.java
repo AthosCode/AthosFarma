@@ -32,7 +32,7 @@ import modelo.Produto;
           ProdutoDao dao = new ProdutoDao();
           List<Produto> listaProduto = dao.Buscar(pesquisa); 
          request.setAttribute("produtos", listaProduto);
-         RequestDispatcher rs = request.getRequestDispatcher("BuscarProduto.jsp");      
+         RequestDispatcher rs = request.getRequestDispatcher("/WEB-INF/jsp/BuscarProduto.jsp");      
         rs.forward(request, response);      
       
                   
