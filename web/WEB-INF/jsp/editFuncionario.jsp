@@ -30,7 +30,7 @@
 
         <div class="conteudo">
 
-            <form class="form-vertical " action="EditarFuncionario" method="get" name="cadfuncionario" id="cadfuncionario">
+            <form class="form-vertical " action="EditFuncionario" method="get" name="cadfuncionario" id="cadfuncionario">
                  <div class="row">
                     <div class="col-sm-6">
                         <div class="form-group">
