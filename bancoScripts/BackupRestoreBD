@@ -1,0 +1,38 @@
+
+Utilização do procedimento de cópia de segurança para realizar cópia de
+segurança em linha:
+O procedimento SYSCS_UTIL.SYSCS_BACKUP_DATABASE é utilizado para criar a
+cópia de segurança do banco de dados em um local especificado.
+O procedimento SYSCS_UTIL.SYSCS_BACKUP_DATABASE recebe como argumento
+uma cadeia de caracteres representando o local onde será armazenada a cópia de
+segurança do banco de dados. Normalmente é fornecido o caminho completo para o
+diretório de cópia de segurança (os caminhos relativos são interpretados como sendo
+relativos ao diretório corrente, e não ao diretório derby.system.home).
+Por exemplo, para especificar o local de cópia de segurança
+c:/minhascopias/2005-06-01 para um banco de dados que se encontra aberto no
+momento, deve ser utilizada a seguinte declaração (são utilizadas barras inclinadas para
+
+frente como separadores do caminho nos comandos SQL):
+CALL SYSCS_UTIL.SYSCS_BACKUP_DATABASE('c:/minhascopias/2005-06-01')
+
+O procedimento SYSCS_UTIL.SYSCS_BACKUP_DATABASE() coloca o banco de
+dados em um estado no qual este pode ser copiado com segurança, depois copia o
+
+
+
+
+
+
+Restauração do banco de dados a partir da cópia de segurança
+Para restaurar um banco de dados utilizando uma cópia de segurança completa
+presente em um determinado local, deve ser especificado o atributo
+restoreFrom=caminho na URL de conexão em tempo de inicialização.
+Se existir um banco de dados com o mesmo nome no local derby.system.home, o
+sistema irá remover este banco de dados, copiá-lo a partir do local da cópia de
+segurança, e reinicializá-lo.
+Os arquivos de log são copiados para o mesmo local onde se encontravam quando a
+cópia de segurança foi realizada. Pode ser utilizado o atributo logDevice junto com o
+atributo restoreFrom=caminho para armazenar os logs em um local diferente.
+Por exemplo, para restaurar o banco de dados amostra utilizando a cópia de segurança
+armazenada em c:\minhascopias\amostra, a URL de conexão deve ser:
+jdbc:derby:sample;restoreFrom=c:\minhascopias\amostra
