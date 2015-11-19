@@ -50,7 +50,7 @@ public class Autenticar extends HttpServlet {
             request.getRequestDispatcher("/ControlerFuncionario").forward(request, response);
         }else {
               request.setAttribute("mensagem", "Usuario e senha Errados");
-              request.getRequestDispatcher("index.jsp").forward(request, response);
+              request.getRequestDispatcher("Autenticar").forward(request, response);
         }
     }
 

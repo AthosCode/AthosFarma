@@ -28,26 +28,26 @@
         <div class="page-header">
                     <h3>Login</h3>
                 </div>
-             <form name="FormLogin" action="Autenticar" method="POST">
+             <form name="FormLogin" action="Autenticar" method="post">
                 <div class="form-group">
                      <label for="exampleInputEmail1">Usuario</label>
                      <div class="input-group">
-                         <span class="input-group-addon"><span class="glyphicon glyphicon-user"</span>
-                    <input type="text" class="form-control" id="inputGroupSuccess1" 
-                   aria-describedby="inputGroupSuccess1Status">
-          </div>
-                </div>
-        <div class="form-group">
-            <label for="exampleInputPassword1">Senha</label>
-             <div class="input-group">
-                         <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"</span>
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-user"</span>
                     <input type="password" class="form-control" id="inputGroupSuccess1" 
-                   aria-describedby="inputGroupSuccess1Status">
+                   aria-describedby="inputGroupSuccess1Status" nome="cnome" value="nome">
+                   </div>
+                </div>
+             <div class="form-group">
+             <label for="exampleInputPassword1">Senha</label>
+             <div class="input-group">
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"</span>
+                    <input type="password" class="form-control" id="inputGroupSuccess1" 
+                   aria-describedby="inputGroupSuccess1Status" name="csenha" value="senha">
           </div>
         </div>
                 </hr> 
-                <button type="button" class="btn btn-success"><span class="glyphicon glyphicon-arrow-left"</span>Voltar</button>
-            <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-lock"</span>Login</button>
+            
+            <button type="submit" class="btn btn-primary">Login<span class="glyphicon glyphicon-lock"</span>Login</button>
             <p><br/><p>
                 </form>
                     </div>

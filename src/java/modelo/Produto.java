@@ -11,25 +11,25 @@ package modelo;
  */
 public class Produto {
     
-    Integer id;
+    Integer id_produto;
     String nome_produto;
     double valor_produto;
 
     public Produto() {
     }
 
-    public Produto(Integer id, String nome_produto, double valor_produto) {
-        this.id = id;
+    public Produto(Integer id_produto, String nome_produto, double valor_produto) {
+        this.id_produto = id_produto;
         this.nome_produto = nome_produto;
         this.valor_produto = valor_produto;
     }
 
-    public Integer getId() {
-        return id;
+    public Integer getId_produto() {
+        return id_produto;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setId_produto(Integer id_produto) {
+        this.id_produto = id_produto;
     }
 
     public String getNome_produto() {
