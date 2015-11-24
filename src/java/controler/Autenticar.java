@@ -33,7 +33,17 @@ public class Autenticar extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
+    
+       @Override
+   protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/jsp/Login.jsp");
+        rd.forward(request, response);
+         
+        }
+     
+     
+     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
         String login = request.getParameter("login");
@@ -47,7 +57,7 @@ public class Autenticar extends HttpServlet {
         if (dao.AutenticaUsuario(funcionario)){
             HttpSession sessao = request.getSession();
             sessao.setAttribute("sessaoUsuario",login);
-            request.getRequestDispatcher("/ControlerFuncionario").forward(request, response);
+            request.getRequestDispatcher("CadastroFuncionario").forward(request, response);
         }else {
               request.setAttribute("mensagem", "Usuario e senha Errados");
               request.getRequestDispatcher("Autenticar").forward(request, response);
@@ -63,11 +73,7 @@ public class Autenticar extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
-    @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        processRequest(request, response);
-    }
+  
 
     /**
      * Handles the HTTP <code>POST</code> method.
@@ -80,8 +86,25 @@ public class Autenticar extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
-    }
+     String login = request.getParameter("login");
+        String senha = request.getParameter("senha");
+        Funcionario funcionario = new Funcionario();
+        funcionario.setNome(login);
+        funcionario.setSobrenome(senha);
+        RequestDispatcher rd = null;
+        FuncionarioDao dao = new FuncionarioDao();
+        
+        if (dao.AutenticaUsuario(funcionario)){
+            HttpSession sessao = request.getSession();
+            sessao.setAttribute("sessaoUsuario",login);
+            request.getRequestDispatcher("CadastroFuncionario").forward(request, response);
+        }else {
+              request.setAttribute("mensagem", "Usuario e senha Errados");
+              request.getRequestDispatcher("/Autenticar").forward(request, response);
+        }
+    }   
+        
+    
 
     /**
      * Returns a short description of the servlet.

@@ -4,6 +4,7 @@
         <servlet-name>listaFuncionario</servlet-name>
         <jsp-file>listaFuncionario.jsp</jsp-file>
     </servlet>
+  
     <servlet>
         <servlet-name>EditarFuncionario</servlet-name>
         <servlet-class>controler.EditarFuncionario</servlet-class>

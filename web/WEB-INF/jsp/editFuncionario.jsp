@@ -20,7 +20,6 @@
         <script type="text/javascript">
             $('[data-datepicker]').datepicker({
                 format: 'dd/mm/yyyy',
-                startDate: '0',
                 language: 'pt-BR'
             });
         </script>
@@ -36,7 +35,7 @@
                         <div class="form-group">
                             <label for="nome" class="control-label"> ID  </label>
                             <div class="">
-                                <input name="tid" required type="text"  class="form-control" id="id" 
+                                <input name="tid" required type="number"  class="form-control" id="id" 
                                        placeholder="id" value="${funcionario.id}">
                             </div>
                         </div>

@@ -9,6 +9,7 @@ import dao.FuncionarioDao;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -18,6 +19,8 @@ import modelo.Funcionario;
  *
  * @author VIVO
  */
+
+ @WebServlet (name="Editar", urlPatterns = {"/Editar"})
 public class EditFuncionario extends HttpServlet {
 
     /**
@@ -31,9 +34,11 @@ public class EditFuncionario extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
         
+        response.setContentType("text/html;charset=UTF-8");
     }
+        
+    
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
@@ -54,7 +59,7 @@ public class EditFuncionario extends HttpServlet {
          FuncionarioDao funcionario = new FuncionarioDao();
          Funcionario  f = funcionario.buscar(i);
          request.setAttribute("funcionario", f);
-         request.getRequestDispatcher("/editFuncionario.jsp").forward(request, response);
+         request.getRequestDispatcher("/WEB-INF/jsp/editFuncionario.jsp").forward(request, response);
     }
 
     /**

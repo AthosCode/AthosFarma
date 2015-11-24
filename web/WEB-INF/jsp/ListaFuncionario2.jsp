@@ -51,7 +51,7 @@
         <td>${funcionario.sobrenome}</td>
         <td>
             <div class="btn-group">
-              <a href="EditFuncionario?acao=&id=${funcionario.id}" type="button" class="btn btn-primary" title="Deseja realmente excluir o projeto?" data-toggle="confirmation" data-singleton="true" data-popout="true"><i class="glyphicon glyphicon-pencil" title="Excluir o projeto"></i> Editar</a>
+              <a href="Editar?acao=&id=${funcionario.id}" type="button" class="btn btn-primary" title="Deseja realmente excluir o projeto?" data-toggle="confirmation" data-singleton="true" data-popout="true"><i class="glyphicon glyphicon-pencil" title="Excluir o projeto"></i> Editar</a>
               <a href="ExcluirFuncionario?acao=&id=${funcionario.id}" type="button" class="btn btn-outline btn-danger" title="Deseja realmente excluir o projeto?" data-toggle="confirmation" data-singleton="true" data-popout="true"><i class="fa fa-trash-o fa-fw" title="Excluir o projeto"></i> Deletar</a> 
              </div>
         </td> 
