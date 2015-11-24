@@ -20,7 +20,6 @@
         <script type="text/javascript">
             $('[data-datepicker]').datepicker({
                 format: 'dd/mm/yyyy',
-                startDate: '0',
                 language: 'pt-BR'
             });
         </script>
@@ -177,6 +176,7 @@
                             </label>
                             <div class="">
                                 <select class="form-control" name="tfuncao">
+                                    <option></option>
                                     <option value="Vendedor">Vendedor</option>
                                     <option value="Gerente">Gerente</option>
                                 </select>
@@ -227,6 +227,46 @@
                         </div>
                     </div>
                     
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label for="Filial" class="control-label">
+                                Filial
+                            </label>
+                            <div class="">
+                                <select class="form-control" name="tfilial">
+                                    <option></option>
+                                    <option value="São Paulo">São Paulo</option>
+                                    <option value="Sorocaba">Sorocaba</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-sm-2">
+                        <div class="form-group">
+                            <label for="Usuario" class="control-label">
+                                Usuario
+                            </label>
+                            <div class="">
+                                <input name="tusuario" 
+                                       type="text" class="form-control" 
+                                       id="salario" placeholder="Usuario">
+                            </div>
+                        </div>
+                    </div>
+                       
+                       <div class="col-sm-2">
+                        <div class="form-group">
+                            <label for="Senha" class="control-label">
+                                Senha
+                            </label>
+                            <div class="">
+                                <input name="tsenha" 
+                                       type="text" class="form-control" 
+                                       id="salario" placeholder="senha">
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                <div class="btn-group">

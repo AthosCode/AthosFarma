@@ -5,8 +5,6 @@
  */
 package controler;
 
-import dao.FuncionarioDao;
-import dao.ProdutoDao;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.RequestDispatcher;
@@ -15,22 +13,13 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import modelo.Funcionario;
-import modelo.Produto;
 
 /**
  *
- * @author VIVO
+ * @author Marcos
  */
-
- @WebServlet (name="CadastarProduto", urlPatterns = {"/CadastrarProduto"})
-public class CadastroProduto extends HttpServlet {
-     
-     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        processRequest(request, response);
-    }
+@WebServlet(name = "Home", urlPatterns = {"/Home"})
+public class Home extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -44,23 +33,10 @@ public class CadastroProduto extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/jsp/CadastrarProduto.jsp");
+        RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/jsp/Home.jsp");
         rd.forward(request, response);
-        String nomeProduto = request.getParameter("tdescricao");
-        String valorProduto = request.getParameter("tnomeProduto");
-        double doubleProduto = Double.parseDouble(valorProduto);  
-        
-        Produto produto = new Produto();
-        produto.setNome_produto(nomeProduto);
-        produto.setValor_produto(doubleProduto);
-        
-       
-        ProdutoDao dao = new ProdutoDao();
-        dao.inserir(produto);
          
-        
-        response.sendRedirect("/WEB-INF/jsp/CadastrarProduto"); 
-    }
+        }
     
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -72,7 +48,11 @@ public class CadastroProduto extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
-    
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        processRequest(request, response);
+    }
 
     /**
      * Handles the HTTP <code>POST</code> method.
