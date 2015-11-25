@@ -82,7 +82,8 @@
                                 CPF
                             </label>
                             <div class="">
-            <input name="tcpf" required  type="text" class="form-control"  id="cpf" placeholder="CPF">
+            <input name="tcpf" required  type="text" class="form-control"  id="cpf" placeholder="CPF" 
+                   value="${funcionario.CPF}">
                             </div>
                         </div>        
 
@@ -96,7 +97,7 @@
                             <div class="">
                                 <input name="trg" required 
                                        type="text" class="form-control" 
-                                       id="rg" placeholder="RG">
+                                       id="rg" placeholder="RG" value="${funcionario.RG}">
                             </div>
                         </div>        
 
@@ -112,7 +113,7 @@
                                        type="text" class="form-control" 
                                        id="dataNascimento" 
                                        placeholder="dd/mm/aaaa"
-                                       data-datepicker>
+                                       data-datepicker value="${funcionario.dataNascimento}">
                             </div>
                         </div>        
                     </div>
@@ -128,7 +129,7 @@
                             <div class="">
                                 <input name="tendereco" required 
                                        type="text" class="form-control" 
-                                       id="endereco" placeholder="Endereço">
+                                       id="endereco" placeholder="Endereço nº" value="${funcionario.endereco}">
                             </div>
                         </div>
                     </div>     
@@ -142,7 +143,7 @@
                             <div class="">
                                 <input name="tcidade" required 
                                        type="text" class="form-control" 
-                                       id="cidade" placeholder="Cidade">
+                                       id="cidade" placeholder="Cidade" value="${funcionario.cidade}">
                             </div>
                         </div>   
                     </div>
@@ -155,7 +156,7 @@
                             <div class="">
                                 <input name="testado" required 
                                        type="text" class="form-control" 
-                                       id="estado" placeholder="Estado">
+                                       id="estado" placeholder="Estado" value="${funcionario.estado}">
                             </div>
                         </div>   
                     </div>
@@ -168,7 +169,7 @@
                             <div class="">
                                 <input name="tcep" required 
                                        type="text" class="form-control" 
-                                       id="cep" placeholder="CEP">
+                                       id="cep" placeholder="CEP" value="${funcionario.CEP}">
                             </div>
                         </div>     
                     </div>
@@ -185,6 +186,7 @@
                                     <option value="Vendedor">Vendedor</option>
                                     <option value="Gerente">Gerente</option>
                                 </select>
+                                
                             </div>
                         </div>
                     </div>
@@ -197,37 +199,7 @@
                             <div class="">
                                 <input name="tsalario" 
                                        type="text" class="form-control" 
-                                       id="salario" placeholder="Salario">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-2">
-                        <div class="form-group">
-                            <label for="dataAdmissao" class="control-label">
-                                Data de Admissão
-                            </label>
-                            <div class="">
-                                <input name="tadmissao" type="text" 
-                                       class="form-control" 
-                                       id="dataAdmissao" 
-                                       placeholder="dd/mm/aaaa"
-                                       data-datepicker>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-2">
-                        <div class="form-group">
-                            <label for="dataDemissao" class="control-label">
-                                Data de Demissão
-                            </label>
-                            <div class="">
-                                <input name="tdemissao" type="text" 
-                                       class="form-control"
-                                       id="dataDemissao" 
-                                       placeholder="dd/mm/aaaa"
-                                       data-datepicker>
+                                       id="salario" placeholder="Salario" value="${funcionario.salario}">
                             </div>
                         </div>
                     </div>

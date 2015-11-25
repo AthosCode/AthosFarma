@@ -40,7 +40,7 @@
                                 Nome        
                             </label>
                             <div class="">
-                                <input name="tnome" 
+                                <input name="nome" 
                                        required type="text" 
                                        class="form-control" id="nome" 
                                        placeholder="Nome" value="${funcionario.nome}">
@@ -56,7 +56,7 @@
                                 Sobrenome
                             </label>
                             <div class="">
-                                <input name="tsobrenome" required 
+                                <input name="sobrenome" required 
                                        type="text" class="form-control" 
                                        id="sobrenome" placeholder="Sobrenome" value="${funcionario.sobrenome}">
                             </div>
@@ -74,7 +74,7 @@
                                 CPF
                             </label>
                             <div class="">
-                                <input name="tcpf" required 
+                                <input name="cpf" required 
                                        type="text" class="form-control" 
                                        id="cpf" placeholder="CPF">
                             </div>
@@ -88,7 +88,7 @@
                                 RG
                             </label>
                             <div class="">
-                                <input name="trg" required 
+                                <input name="rg" required 
                                        type="text" class="form-control" 
                                        id="rg" placeholder="RG">
                             </div>
@@ -102,7 +102,7 @@
                                 Data de Nascimento
                             </label>
                             <div class="">
-                                <input name="tdata" required 
+                                <input name="dtnascimento" required 
                                        type="text" class="form-control" 
                                        id="dataNascimento" 
                                        placeholder="dd/mm/aaaa"
@@ -120,7 +120,7 @@
                                 Endereço
                             </label>
                             <div class="">
-                                <input name="tendereco" required 
+                                <input name="endereco" required 
                                        type="text" class="form-control" 
                                        id="endereco" placeholder="Endereço">
                             </div>
@@ -134,7 +134,7 @@
                                 Cidade
                             </label>
                             <div class="">
-                                <input name="tcidade" required 
+                                <input name="cidade" required 
                                        type="text" class="form-control" 
                                        id="cidade" placeholder="Cidade">
                             </div>
@@ -147,7 +147,7 @@
                                 Estado
                             </label>
                             <div class="">
-                                <input name="testado" required 
+                                <input name="estado" required 
                                        type="text" class="form-control" 
                                        id="estado" placeholder="Estado">
                             </div>
@@ -160,7 +160,7 @@
                                 CEP
                             </label>
                             <div class="">
-                                <input name="tcep" required 
+                                <input name="cep" required 
                                        type="text" class="form-control" 
                                        id="cep" placeholder="CEP">
                             </div>
@@ -175,7 +175,7 @@
                                 Função
                             </label>
                             <div class="">
-                                <select class="form-control" name="tfuncao">
+                                <select class="form-control" name="funcao">
                                     <option></option>
                                     <option value="Vendedor">Vendedor</option>
                                     <option value="Gerente">Gerente</option>
@@ -190,50 +190,19 @@
                                 Salario
                             </label>
                             <div class="">
-                                <input name="tsalario" 
+                                <input name="salario" 
                                        type="text" class="form-control" 
                                        id="salario" placeholder="Salario">
                             </div>
                         </div>
-                    </div>
-
-                    <div class="col-sm-2">
-                        <div class="form-group">
-                            <label for="dataAdmissao" class="control-label">
-                                Data de Admissão
-                            </label>
-                            <div class="">
-                                <input name="tadmissao" type="text" 
-                                       class="form-control" 
-                                       id="dataAdmissao" 
-                                       placeholder="dd/mm/aaaa"
-                                       data-datepicker>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-2">
-                        <div class="form-group">
-                            <label for="dataDemissao" class="control-label">
-                                Data de Demissão
-                            </label>
-                            <div class="">
-                                <input name="tdemissao" type="text" 
-                                       class="form-control"
-                                       id="dataDemissao" 
-                                       placeholder="dd/mm/aaaa"
-                                       data-datepicker>
-                            </div>
-                        </div>
-                    </div>
-                    
+                    </div>                  
                     <div class="col-sm-4">
                         <div class="form-group">
                             <label for="Filial" class="control-label">
                                 Filial
                             </label>
                             <div class="">
-                                <select class="form-control" name="tfilial">
+                                <select class="form-control" name="filial">
                                     <option></option>
                                     <option value="São Paulo">São Paulo</option>
                                     <option value="Sorocaba">Sorocaba</option>
@@ -248,7 +217,7 @@
                                 Usuario
                             </label>
                             <div class="">
-                                <input name="tusuario" 
+                                <input name="usuario" 
                                        type="text" class="form-control" 
                                        id="salario" placeholder="Usuario">
                             </div>
@@ -261,7 +230,7 @@
                                 Senha
                             </label>
                             <div class="">
-                                <input name="tsenha" 
+                                <input name="senha" 
                                        type="text" class="form-control" 
                                        id="salario" placeholder="senha">
                             </div>
