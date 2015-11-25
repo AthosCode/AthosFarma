@@ -49,8 +49,8 @@ public class Autenticar extends HttpServlet {
         String login = request.getParameter("login");
         String senha = request.getParameter("senha");
         Funcionario funcionario = new Funcionario();
-        funcionario.setNome(login);
-        funcionario.setSobrenome(senha);
+        funcionario.setUsuario(login);
+        funcionario.setSenha(senha);
         RequestDispatcher rd = null;
         FuncionarioDao dao = new FuncionarioDao();
         
