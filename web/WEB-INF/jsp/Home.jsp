@@ -10,7 +10,7 @@
 
     <jsp:attribute name="paginaHead">
         <!-- CSS e outros que vão no <head> da página -->
-        <link rel="stylesheet" type="text/css" href="/>
+        <link rel="stylesheet" type="text/css" href=""/>
     </jsp:attribute>
 
     <jsp:attribute name="paginaBottom">
@@ -21,7 +21,7 @@
     <jsp:body>
         
         
-      <div class="conteudo">
+      <div class="logo">
         <img src="img/Logo_1.png"/>
         </div>     
        
