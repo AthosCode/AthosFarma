@@ -57,7 +57,7 @@ public class Autenticar extends HttpServlet {
         if (dao.AutenticaUsuario(funcionario)){
             HttpSession sessao = request.getSession();
             sessao.setAttribute("sessaoUsuario",login);
-            request.getRequestDispatcher("CadastroFuncionario").forward(request, response);
+            request.getRequestDispatcher("Home").forward(request, response);
         }else {
               request.setAttribute("mensagem", "Usuario e senha Errados");
               request.getRequestDispatcher("Autenticar").forward(request, response);
@@ -86,21 +86,22 @@ public class Autenticar extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-     String login = request.getParameter("login");
+        String login = request.getParameter("login");
         String senha = request.getParameter("senha");
         Funcionario funcionario = new Funcionario();
-        funcionario.setNome(login);
-        funcionario.setSobrenome(senha);
+        funcionario.setUsuario(login);
+        funcionario.setSenha(senha);
         RequestDispatcher rd = null;
         FuncionarioDao dao = new FuncionarioDao();
         
         if (dao.AutenticaUsuario(funcionario)){
             HttpSession sessao = request.getSession();
             sessao.setAttribute("sessaoUsuario",login);
-            request.getRequestDispatcher("CadastroFuncionario").forward(request, response);
+            response.sendRedirect("Home");
+           //" request.getRequestDispatcher("Home").forward(request, response);
         }else {
               request.setAttribute("mensagem", "Usuario e senha Errados");
-              request.getRequestDispatcher("/Autenticar").forward(request, response);
+              request.getRequestDispatcher("/WEB-INF/jsp/Login.jsp").forward(request, response);
         }
     }   
         
