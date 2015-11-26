@@ -77,20 +77,29 @@
         
          <td> 
              
-       <div class="form-group">
-      <select class="form-control" id="sel1">
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-      </select>
-      </div>    
+        <div class="col-sm-3">
+                         <div class="form-group">
+                            <label for="Quantidade" class="control-label">
+                                Quantidade       
+                            </label>
+                            <div class="">
+                                <input name="Quantidade" 
+                                       required type="text" 
+                                       class="form-control" id="cquantidade" 
+                                       placeholder="Quantidade">
+                            </div>
+                        </div>
+                        </div>
 
         </td>
         <td> 
-             
+             <c:set var='quantidade' value='Quantidade'/>
                 <button class="btn btn-primary" type="submit">
-                    <span class="glyphicon glyphicon-shopping-cart">Adicionar</span>
+                   
+                     
+      <a href="InsereVenda?acao=&descricaoProduto=${produto.nome_produto}&valorUnitario=${produto.valor_produto}&quantidade=&quantidade type="button" class="btn btn-primary" title="Deseja realmente excluir o projeto?" data-toggle="confirmation" data-singleton="true" data-popout="true"><i class="glyphicon glyphicon-shopping-cart" title="Excluir o projeto"></i>Adicionar</a>
+                
+               
                 </button>
           
         </td>

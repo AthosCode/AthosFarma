@@ -25,7 +25,7 @@
                 
                 <small>
                     
-                    <a href="index.jsp">
+                    <a href="Autenticar">
                         Logout
                     </a>
                     

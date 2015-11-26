@@ -5,8 +5,7 @@
  */
 package controler;
 
-import dao.FuncionarioDao;
-import dao.ProdutoDao;
+import dao.VendaDao;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.RequestDispatcher;
@@ -15,22 +14,14 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import modelo.Funcionario;
-import modelo.Produto;
+import modelo.Venda;
 
 /**
  *
  * @author VIVO
  */
-
- @WebServlet (name="CadastarProduto", urlPatterns = {"/CadastrarProduto"})
-public class CadastroProduto extends HttpServlet {
-     
-     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        processRequest(request, response);
-    }
+@WebServlet(name = "InsereVenda", urlPatterns = {"/InsereVenda"})
+public class InsereVenda extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -44,26 +35,29 @@ public class CadastroProduto extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/jsp/CadastrarProduto.jsp");
+        RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/jsp/BuscarProduto.jsp");
         rd.forward(request, response);
         
-        String nomeProduto = request.getParameter("tnomeProduto");
-        String valorProduto = request.getParameter("tvalorUnitario");
-        double doubleProduto = Double.parseDouble(valorProduto);  
+        String descricaoProduto = request.getParameter("descricaoProduto");
+        
+        String valorUnitario = request.getParameter("valorUnitario");
+        double doublevalorUnitario = Double.parseDouble(valorUnitario);
+        
         String quantidade = request.getParameter("quantidade");
-        int quantidadeProduto = Integer.parseInt(quantidade);
+        Integer intQuantidade = Integer.parseInt(quantidade);  
         
-        Produto produto = new Produto();
-        produto.setNome_produto(nomeProduto);
-        produto.setValor_produto(doubleProduto);
-        produto.setQuantidade(quantidadeProduto);
+        double total = (doublevalorUnitario * intQuantidade);
         
-       
-        ProdutoDao dao = new ProdutoDao();
-        dao.inserir(produto);
+        Venda venda = new Venda();
+        venda.setDescricaoProduto(descricaoProduto);
+        venda.setValorUnitario(doublevalorUnitario);
+        venda.setQuantidade(intQuantidade);
+        venda.setTotal(total);
+        VendaDao dao = new  VendaDao();
+        dao.inserir(venda);
          
         
-        response.sendRedirect("/WEB-INF/jsp/CadastrarProduto"); 
+        response.sendRedirect("/WEB-INF/jsp/BuscarProduto"); 
     }
     
 
@@ -76,7 +70,11 @@ public class CadastroProduto extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
-    
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        processRequest(request, response);
+    }
 
     /**
      * Handles the HTTP <code>POST</code> method.

@@ -54,12 +54,12 @@ public class Autenticar extends HttpServlet {
         RequestDispatcher rd = null;
         FuncionarioDao dao = new FuncionarioDao();
         
-        if (dao.AutenticaUsuario(funcionario)){
+        if (dao.AutenticaUsuario(funcionario)&& (!login.isEmpty()) && (!senha.isEmpty())){
             HttpSession sessao = request.getSession();
             sessao.setAttribute("sessaoUsuario",login);
             request.getRequestDispatcher("Home").forward(request, response);
         }else {
-              request.setAttribute("mensagem", "Usuario e senha Errados");
+              request.setAttribute("mensagem", "Usuario ou senha invalidos");
               request.getRequestDispatcher("Autenticar").forward(request, response);
         }
     }

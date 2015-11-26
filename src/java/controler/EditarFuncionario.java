@@ -49,8 +49,8 @@ public class EditarFuncionario extends HttpServlet {
         String cep = request.getParameter("cep");
         String funcao = request.getParameter("funcao");
         String filial = request.getParameter("filial");
-        String salario = request.getParameter("salario");
-        double doubleSalario = Double.parseDouble(salario); 
+        String salarioStr = request.getParameter("salario");
+        double salario = Double.parseDouble(salarioStr); 
         String usuario = request.getParameter("usuario");
         String senha = request.getParameter("senha");
         
@@ -75,7 +75,7 @@ public class EditarFuncionario extends HttpServlet {
         funcionario.setEstado(estado);
         funcionario.setCEP(cep);
         funcionario.setFuncao(funcao);
-        funcionario.setSalario(doubleSalario);
+        funcionario.setSalario(salario);
         funcionario.setFilial(filial);
         funcionario.setUsuario(usuario);
         funcionario.setSenha(senha);

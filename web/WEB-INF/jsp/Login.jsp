@@ -15,11 +15,10 @@
         <script src="js/jquery-1.9.1.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
         
-        <title>JSP Page</title>
+        <title>Autenticar</title>
         
     </head>
-    <body style="background:#eee;">
-    <c:if test="${not empty(mensagem)}"><h3><c:out value="${mensagem}"/></h3></c:if>
+    <body style="background:#eee;">         
       <div class="container">
           <P><br></p>
              <div class="row">
@@ -29,6 +28,7 @@
                                  <div class="panel-body">
                                     <div class="page-header">
                                         <h3>Login</h3>
+                                    <c:if test="${not empty(mensagem)}"><h3><c:out value="${mensagem}"/></h3></c:if>
                              </div>
                            <form role="form" action="Autenticar" method="post">
                                 <div class="form-group">
