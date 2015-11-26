@@ -14,14 +14,16 @@ public class Produto {
     Integer id_produto;
     String nome_produto;
     double valor_produto;
+    Integer quantidade;
 
     public Produto() {
     }
 
-    public Produto(Integer id_produto, String nome_produto, double valor_produto) {
+    public Produto(Integer id_produto, String nome_produto, double valor_produto, Integer quantidade) {
         this.id_produto = id_produto;
         this.nome_produto = nome_produto;
         this.valor_produto = valor_produto;
+        this.quantidade = quantidade;
     }
 
     public Integer getId_produto() {
@@ -47,6 +49,14 @@ public class Produto {
     public void setValor_produto(double valor_produto) {
         this.valor_produto = valor_produto;
     }
-    
-    
+
+    public Integer getQuantidade() {
+        return quantidade;
+    }
+
+    public void setQuantidade(Integer quantidade) {
+        this.quantidade = quantidade;
+    }
+
+   
 }

@@ -179,12 +179,12 @@ public class FuncionarioDao {
     
     
     public boolean AutenticaUsuario (Funcionario funcionario){
-        String SQL = "SELECT * FROM funcionario WHERE nome=? and sobrenome=?";
+        String SQL = "SELECT * FROM funcionario WHERE usuario=? and senha=?";
        
         try {
             PreparedStatement ps = connection.prepareStatement(SQL);
-            ps.setString(1,funcionario.getNome());
-            ps.setString(2,funcionario.getSobrenome());
+            ps.setString(1,funcionario.getUsuario());
+            ps.setString(2,funcionario.getSenha());
             ResultSet rs = ps.executeQuery();
             if (rs.next()){
                 return true;

@@ -30,10 +30,11 @@ public class ProdutoDao {
 
     public void inserir(Produto produto) {
         try {
-            String SQL = "INSERT INTO produtos (nome_produto,valor_produto) VALUES (?,?)";
+            String SQL = "INSERT INTO produtos (nome_produto,valor_produto,quantidade) VALUES (?,?,?)";
             PreparedStatement ps = connection.prepareStatement(SQL);
             ps.setString(1, produto.getNome_produto());
             ps.setDouble(2, produto.getValor_produto());
+            ps.setInt(3,produto.getQuantidade());
             ps.executeUpdate();
             ps.close();
         } catch (SQLException ex) {
@@ -55,6 +56,7 @@ public class ProdutoDao {
                 produto.setId_produto(rs.getInt("id_produto"));
                 produto.setNome_produto(rs.getString("nome_produto"));
                 produto.setValor_produto(rs.getDouble("valor_produto"));
+                produto.setQuantidade(rs.getInt("quantidade"));
                 produtos.add(produto);
                 
             }

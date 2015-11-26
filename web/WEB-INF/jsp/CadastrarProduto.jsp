@@ -26,26 +26,15 @@
     </jsp:attribute>
 
     <jsp:body>
-
+    <h1>CADASTRO PRODUTO</h1>
         <div class="conteudo">
 
-            <form class="form-vertical" 
-                  action="ControlerFuncionario" method="post">
+            <form class="form-vertical" action="CadastrarProduto" method="post">
                 <div class="row">
 
                     <div class="col-sm-6">
 
-                        <div class="form-group">
-                            <label for="Descricao" class="control-label">
-                                Descrição        
-                            </label>
-                            <div class="">
-                                <input name="tdescricao" 
-                                       required type="text" 
-                                       class="form-control" id="cdescricao" 
-                                       placeholder="Descrição do produto">
-                            </div>
-                        </div>
+                       
 
                         <div class="form-group">
                             <label for="NomeProduto" class="control-label">
@@ -69,6 +58,19 @@
                             </div>
                         </div>
                         
+                        <div class="col-sm-3">
+                         <div class="form-group">
+                            <label for="Quantidade" class="control-label">
+                                Quantidade       
+                            </label>
+                            <div class="">
+                                <input name="quantidade" 
+                                       required type="text" 
+                                       class="form-control" id="cquantidade" 
+                                       placeholder="Quantidade">
+                            </div>
+                        </div>
+                        </div>
                     </div>
 
                     
@@ -79,7 +81,7 @@
                             SALVAR
                         </button>
                          </button>
-                        <a  href="ListaFuncionarios"   <button type="submit" class= "btn btn-primary" > <i class="glyphicon glyphicon-search"></i> Listar Todos </a>   
+                        <a  href="ListaProduto"   <button type="submit" class= "btn btn-primary" > <i class="glyphicon glyphicon-search"></i> Listar Todos </a>   
                         </button>  
                     </div>
                 </div>
