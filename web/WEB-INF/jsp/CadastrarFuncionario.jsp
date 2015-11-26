@@ -192,7 +192,7 @@
                             <div class="">
                                 <input name="salario" 
                                        type="text" class="form-control" 
-                                       id="salario" placeholder="Salario">
+                                       id="salario" placeholder="salario">
                             </div>
                         </div>
                     </div>                  
