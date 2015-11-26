@@ -19,9 +19,15 @@
     </jsp:attribute>
      
     <jsp:body>
+
+        
+        
+      <div class="logo">
+        <img src="img/Logo_1.png"/>
+        </div>     
        
         
-       <img src="img/Logo_1.png" id="logo"/>
+      
                
         
     </jsp:body>

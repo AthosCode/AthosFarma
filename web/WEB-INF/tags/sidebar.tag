@@ -16,6 +16,6 @@
             </ul>
         </li>
         <li><a href="<c:url value="/Busca"/>">Vendas</a></li>
-        <li><a href="#">Relatorios</a></li>
+        <li><a href="<c:url value=""/>">Relatorios</a></li>
     </ul>
 </div>

@@ -219,7 +219,7 @@
                             <div class="">
                                 <input name="usuario" 
                                        type="text" class="form-control" 
-                                       id="salario" placeholder="Usuario">
+                                       id="usuario" placeholder="Usuario">
                             </div>
                         </div>
                     </div>
@@ -232,7 +232,7 @@
                             <div class="">
                                 <input name="senha" 
                                        type="text" class="form-control" 
-                                       id="salario" placeholder="senha">
+                                       id="usuario" placeholder="senha">
                             </div>
                         </div>
                     </div>
