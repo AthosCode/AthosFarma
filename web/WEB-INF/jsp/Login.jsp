@@ -5,6 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -18,6 +19,7 @@
         
     </head>
     <body style="background:#eee;">
+    <c:if test="${not empty(mensagem)}"><h3><c:out value="${mensagem}"/></h3></c:if>
       <div class="container">
           <P><br></p>
              <div class="row">
@@ -28,19 +30,19 @@
                                     <div class="page-header">
                                         <h3>Login</h3>
                              </div>
-                           <form role="form" action="Autenticar" method="POST">
+                           <form role="form" action="Autenticar" method="post">
                                 <div class="form-group">
                                  <label for="exampleInputEmail1">Email address</label>
                                  <div class="input-group">
                                      <span class="input-group-addon">  <span class="glyphicon glyphicon-user"></span></span>
-                                    <input type="text" class="form-control" placeholder="Username">
+                                    <input  name="login" type="text" class="form-control" placeholder="Username" >
                                  </div>    
                                 </div>
                     <div class="form-group">
                     <label for="exampleInputPassword1">Password</label>
                      <div class="input-group">
                                      <span class="input-group-addon">  <span class="glyphicon glyphicon-asterisk"></span></span>
-                                    <input type="password" class="form-control" placeholder="Username">
+                                    <input name="senha" type="password" class="form-control" placeholder="Username">
                                  </div>
                                  
                                   <hr>
